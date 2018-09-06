@@ -10,37 +10,49 @@
 </head>
 
 <body class="bg-teal-darker">
-    
-    <div class="bg-grey-darkest max-w-sm rounded overflow-hidden shadow-lg flex-col mb-8 flex items-center">  
-    <h1 class=>Contacts</h1> 
-    <button class ="add-contact bg-blue-dark hover:bg-blue-light text-white font-bold py-2 px-4 rounded-full">Add Contact</button>
+      
+ 
+  <div class="bg-grey-darkest max-w-sm rounded overflow-hidden shadow-lg flex-col mb-8 flex items-center">
+    <h1>Contacts</h1>
+    <button class="add-contact bg-blue-dark hover:bg-blue-light text-white font-bold py-2 px-4 rounded-full">Add Contact</button>
 
-    <form class="new-contact-form" action="#">  
+    <form class="new-contact-form" action="#">
+          <table>
+          <tr>        
+            <td><label class="" for="name">  Name</label></td>
+            <td><input class="bg-blue-dark hover:bg-blue-light text-white" id="contact-name" name="name" type="text"></td>
+          </tr> 
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td><input id="contact-email" name="email" type="email"></td>
+          </tr>
+          <tr>
+            <td><label for="phone">Phone</label> </td>
+            <td><input id="contact-phone" name="phone" type="text"></td>
+          </tr>
+          <tr>
+            <td> <label for="company">Company</label></td>
+            <td> <input id="contact-company" name="company" type="text"></td> 
+          </tr>
+          <tr>
+            <td><label for="notes">Notes</label></td>
+            <td><textarea id="contact-notes" name="notes" type="text"></textarea></td>
+          </tr>
+          <tr>
+            <td><label for="twitter">Twitter</label> </td>
+            <td><input id="contact-twitter" name="twitter" type="text"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input class="save-contact" type="submit" value="Save contact"></td>
+          <tr>
+          </table>
 
-    <div class="flex-col mb-6">
-      <label class="" for="name">
-        Name</label>
-        <input class="bg-blue-dark hover:bg-blue-light text-white"id="contact-name" name="name" type="text">
+    </form>
+    <script src="./dist/bundle.js"></script>
+    <div class="contact-list">
+
     </div>
-
-    <!-- <label for="name">Name</label>
-    <input id="contact-name" name="name" type="text"> -->
-    <label for="email">Email</label>
-    <input id="contact-email" name="email" type="email">
-    <label for="phone">Phone</label>
-    <input id="contact-phone" name="phone" type="text">
-    <label for="company">Company</label>
-    <input id="contact-company" name="company" type="text">
-    <label for="notes">Notes</label>
-    <textarea id="contact-notes" name="notes" type="text"></textarea>
-    <label for="twitter">Twitter</label>
-    <input id="contact-twitter" name="twitter" type="text">
-    <input class="save-contact" type="submit" value="Save contact">   
-  </form>
-  <script src="./dist/bundle.js"></script>
-  <div class="contact-list">
-    
-  </div>  
 </body>
 
 
