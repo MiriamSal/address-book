@@ -10,7 +10,7 @@ Feature: Create contacts
     And I should see "You have no contacts in your address book"
     When I click "Add contact"
     Then I fill in "Name" with "John Doe"
-    And I fill in "Email" with "john@doe.com"
+    Then I fill in "Email" with "john@doe.com"
     And I fill in "Phone" with "0123456789"
     And I fill in "Company" with "Craft Academy"
     And I fill in "Notes" with "A really awsome guy :-)"
