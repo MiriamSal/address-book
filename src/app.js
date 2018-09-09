@@ -2,7 +2,7 @@ const storage = window.localStorage
 
 const renderContacts = () => {
   const contacts = JSON.parse(storage.getItem('contacts'))
-  let div = document.querySelector('.contact-list')
+  const div = document.querySelector('.contact-list')
   if (contacts) {
     div.innerHTML = ''
     const ul = document.createElement('ul')
@@ -27,7 +27,7 @@ const renderContacts = () => {
   }
 }
 
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     renderContacts()
     const addContactForm = document.querySelector('.new-contact-form')
    
@@ -61,5 +61,5 @@ const renderContacts = () => {
       renderContacts()
       addContactForm.reset()
   })
-  })
+})
 

@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <title>Address book</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <title>Address book</title>
+</head>
 
-  <body class="bg-grey-lighter">
+<body class="bg-grey-lighter"></body>
 
+  <div class="bg-grey-lightest shadow-lg max-w-sm flex-col mb-8 flex items-center">
+    <h1>Contacts</h1>
+    <button class="add-contact bg-grey-lighter hover:bg-grey-light text-black font-bold py-2 px-4 rounded-full">Add Contact</button>
 
-    <div class="bg-grey-lightest max-w-sm rounded overflow-hidden shadow-lg flex-col mb-8 flex items-center">
-      <h1>Contacts</h1>
-      <button class="add-contact bg-blue-dark hover:bg-blue-lighter text-white font-bold py-2 px-4 rounded-full">Add Contact</button>
+    <form class="new-contact-form" action="#">
+      <table>
+        <tr>
+          <td>
+            <label for="name">Name</label>
+          </td>
+          <td>
+            <input class="bg-grey-lighter hover:bg-grey-light text-black" id="contact-name" name="name" type="text"></input>
+          </td>
+          <td>
+            <label for="email">Email</label>
+          </td>
+          <td>
+            <input class="bg-grey-lighter hover:bg-grey-light text-black" id="contact-email" name="email" type="email"></input>
+          </td>
+        </tr>
 
-      <form class="new-contact-form" action="#">
-        <table>
-          <tr>
-            <td><label class="" for="name"> Name</label></td>
-            <td><input class="bg-blue-dark hover:bg-blue-lighter text-white" id="contact-name" name="name" type="text"></input></td>
-            <td><label class="" for="email">Email</label></td><td>
-              <input class="bg-blue-dark hover:bg-blue-lighter" id="contact-email" name="email" type="email"></input>
-            </td>
-          </tr>
-          <tr>
-            <td><label class="" for="phone">Phone</label></td>
-            <td><input class="bg-blue-dark hover:bg-blue-lighter"  id="contact-phone" name="phone" type="text"></input></td>
+        <tr>
+          <td>
+            <label for="phone">Phone</label>
+          </td>
+          <td>
+            <input class="bg-grey-lighter hover:bg-grey-light text-black" id="contact-phone" name="phone" type="text"></input>
+          </td>
+          <td>
+            <label for="company">Company</label>
+          </td>
+          <td>
+            <input class="bg-grey-lighter hover:bg-grey-light text-black" id="contact-company" name="company" type="text"></input>
+          </td>
+        </tr>
 
-            <td><label class="" for="company">Company</label></td>
-            <td><input class="bg-blue-dark hover:bg-blue-lighter" id="contact-company" name="company" type="text"></input></td>
-          </tr>
+        <tr>
+          <td>
+            <label for="notes">Notes</label>
+          </td>
+          <td>
+            <textarea class="bg-grey-lighter hover:bg-grey-light text-black" id="contact-notes" name="notes" type="text"></textarea>
+          </td>
+          <td>
+            <label for="twitter">Twitter</label>
+          </td>
+          <td>
+            <input class="bg-grey-lighter hover:bg-grey-light text-black" id="contact-twitter" name="twitter" type="text"></input>
+          </td>
+        </tr>
         
-          <tr>
-            <td><label class="" for="notes">Notes</label></input></td>
-            <td><textarea class="bg-blue-dark hover:bg-blue-lighter" id="contact-notes" name="notes" type="text"></textarea></input></td>
-            <td><label class="" for="twitter">Twitter</label></input></td>
-            <td><input class="bg-blue-dark hover:bg-blue-lighter" id="contact-twitter" name="twitter" type="text"></input></td>
-          </tr>
-          
-          <tr>
-            <td>
-              <button class="save-contact bg-blue-dark hover:bg-blue-lighter text-white font-bold py-2 px-4 rounded-full">Save Contact</button>
-            </td>
-          <tr>
-        </table>
-      </form>
-      
-      <script src="./dist/bundle.js"></script>
-      <div class="contact-list"></div>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button class="save-contact bg-grey-lighter hover:bg-grey-light text-black font-bold py-2 px-4 rounded-full">Save Contact</button>
+          </td>
+        </tr>
+      </table>
+    </form>
 
-    </div>
-  </body>
+    <script src="./dist/bundle.js"></script>
+    <div class="contact-list"></div>
+
+  </div>
+</body>
+
 </html>
